@@ -25,6 +25,22 @@ Execute following steps to work with smart contract on Etherscan
 *You need to have Metamask installed to be able to call Smart Contract functions. Metamask must be connected to correct network. If you are using ropsten.etherscan.io then you should
 connect your Metamask to Ropsten network.*
 
+### The most important functions
+**Read Contract Section
+- totalSupply - returns value of total Supply
+- balanceOf - returns number of tokens owned by an account
+
+**Write Contract section
+- mint - allows to mint new tokens. Specify account receiving tokens and number of tokens to mint. 
+- burn - burn specified number of your tokens. 
+- addToBlackList - add account to the blacklist
+- removeFromBlackList - remove account from blacklist. 
+- addMinter - adds new Minter to smart contract. User has to be a Minter to add new Minter. 
+- renounceMinter - removes Minter role from specified account. User has to be a Minter to renounce another account Minter role. 
+- transfer - transfer specified number of your tokens to another account. 
+- destroyBlackFunds - allows to destroy funds of blacklisted account. It set account balance to zero and decrease totalSupply. 
+- pause - Pause Smart Contract. Transfering tokens will not be allowed. Can be called only by an account having Pauser role. 
+- unpause - Unpuase Smart Contract. Tranfsering tokens will be again possible. 
 
 
 ### In addition to ERC-20 token standard this smart contract emits following events:
