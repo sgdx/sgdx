@@ -1,8 +1,8 @@
 # SkyWork Stable Coin - Alpha Version
 
-*This is Truffle Framework Smart Contract Project implementing ERC-20 Stable Coin Smart Contract for SkyWork
+##This is Truffle Framework Smart Contract Project implementing ERC-20 Stable Coin Smart Contract for SkyWork
 
-**It implements following requirements:
+###It implements following requirements:
 - Follows ERC-20 token standard. 
 - Implements Following Additional Functionality
   - Minting
@@ -16,7 +16,7 @@
     - Pauser - Can pause and unpause token transfer functionality.
 
 
-**In addition to ERC-20 token standard this smart contract emits following events:
+###In addition to ERC-20 token standard this smart contract emits following events:
 - `event BlackListerAdded(address indexed account)` - Emitted when account was added Blaklister role. 
 - `event BlackListerRemoved(address indexed account);` - Emitted when user had blacklister role revoked. 
 - `event AddedToBlackList(address indexed account);` - Emitted when account was added to the blacklist.
