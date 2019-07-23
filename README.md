@@ -15,6 +15,15 @@
     - BlackLister - Can Add/Remove accounts to the blacklist. Can also destroy blacklisted funds.
     - Pauser - Can pause and unpause token transfer functionality.
 
+### How to use it.
+Execute following steps to work with smart contract on Etherscan 
+- Go to Etherscan and find a contract. Paste contract address to Search Box and press enter. 
+- Click on "View Dapp Page" icon. It is on the second table in the first row. Looks like pencil ( a bit ;)) 
+- Once there you can use two sections. Read Contract which allows to call no state changing functions. Write Contract which allow to call state changing functions. 
+
+You need to have Metamask installed to be able to call Smart Contract functions. Metamask must be connected to correct network. If you are using ropsten.etherscan.io then you should
+connect your Metamask to Ropsten network. 
+
 
 ### In addition to ERC-20 token standard this smart contract emits following events:
 - `event BlackListerAdded(address indexed account)` - Emitted when account was added Blaklister role. 
