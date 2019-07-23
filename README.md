@@ -21,6 +21,7 @@ Execute following steps to work with smart contract on Etherscan
 - Click on "View Dapp Page" icon. It is on the second table in the first row. Looks like pencil ( a bit ;)) 
 - Once there you can use two sections. Read Contract which allows to call no state changing functions. Write Contract which allow to call state changing functions. 
 
+
 *You need to have Metamask installed to be able to call Smart Contract functions. Metamask must be connected to correct network. If you are using ropsten.etherscan.io then you should
 connect your Metamask to Ropsten network.*
 
