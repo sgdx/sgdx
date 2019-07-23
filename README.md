@@ -26,11 +26,11 @@ Execute following steps to work with smart contract on Etherscan
 connect your Metamask to Ropsten network.*
 
 ### The most important functions
-    **Read Contract Section**
+**Read Contract Section**
 - totalSupply - returns value of total Supply
 - balanceOf - returns number of tokens owned by an account
 
-    **Write Contract section**
+**Write Contract section**
 - mint - allows to mint new tokens. Specify account receiving tokens and number of tokens to mint. 
 - burn - burn specified number of your tokens. 
 - addToBlackList - add account to the blacklist
