@@ -124,9 +124,35 @@ contract('SkyWorkStableCoin Baisc Test Set', async accounts => {
     await expect(SWSCContract.destroyBlackFunds(accounts[4])).to.be.eventually.fulfilled
     let newBalance4 = await SWSCContract.balanceOf(accounts[4])
     let newTotalSupply = await SWSCContract.totalSupply()
+    await expect(SWSCContract.removeFromBlackList(accounts[4])).to.be.eventually.fulfilled
     
     expect (newBalance4.toNumber()).to.be.equal(0);
     expect (newTotalSupply.toNumber()).to.be.equal(totalSupply.sub(balance4).toNumber());
+  })
+
+  it('16. Mint to many and check balance.', async () => {
+
+    let expectedBalances = [1,2,3,4]
+    let accountsToMint =[accounts[5],accounts[6],accounts[7],accounts[4]];
+    await expect(SWSCContract.mintToMany(accountsToMint,expectedBalances)).to.be.eventually.fulfilled
+    let balances = await SWSCContract.balanceOfMany(accountsToMint)
+
+    for(let i = 0; i< balances.length;i++)
+    {
+      expect(balances[i].toNumber()).to.be.equal(expectedBalances[i])
+    }
+  })
+
+  it('16. Transfer to many and check balances.', async () => {
+
+    let expectedTransfers = [23,17]
+    await expect(SWSCContract.transferToMany([accounts[8],accounts[9]],expectedTransfers,{from:accounts[3]})).to.be.eventually.fulfilled
+    let balances = await SWSCContract.balanceOfMany([accounts[8],accounts[9]])
+
+    for(let i = 0; i< balances.length;i++)
+    {
+      expect(balances[i].toNumber()).to.be.equal(expectedTransfers[i])
+    }
   })
 
 

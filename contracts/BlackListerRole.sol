@@ -1,6 +1,6 @@
 pragma solidity ^0.5.0;
 
-import "../node-modules/openzeppelin-solidity/contracts/access/Roles.sol";
+import "../node_modules/openzeppelin-solidity/contracts/access/Roles.sol";
 
 
 
