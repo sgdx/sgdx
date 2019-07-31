@@ -100,30 +100,30 @@ contract SkyWorkStableCoin is ERC20Burnable, ERC20Mintable,ERC20Detailed, ERC20P
         emit BlackFundsDestroyed(account, balance);
     }
 
-    function transferToMany (address[] memory to, uint256[] memory value) public notBlackListedToMany(to) returns (bool) {
-        require(to.length == value.length,'To array and Value array length do not match');
+    // function transferToMany (address[] memory to, uint256[] memory value) public notBlackListedToMany(to) returns (bool) {
+    //     require(to.length == value.length,'To array and Value array length do not match');
 
-        for(uint i = 0; i < to.length; i++) {
-            transfer(to[i],value[i]);
-        }
-    }
+    //     for(uint i = 0; i < to.length; i++) {
+    //         transfer(to[i],value[i]);
+    //     }
+    // }
 
-    function mintToMany (address[] memory to, uint256[] memory value) public notBlackListedToMany(to) returns (bool) {
-        require(to.length == value.length,'To array and Value array length do not match');
+    // function mintToMany (address[] memory to, uint256[] memory value) public notBlackListedToMany(to) returns (bool) {
+    //     require(to.length == value.length,'To array and Value array length do not match');
 
-            for(uint i = 0; i < to.length; i++) {
-            mint(to[i],value[i]);
-        }
-    }
+    //         for(uint i = 0; i < to.length; i++) {
+    //         mint(to[i],value[i]);
+    //     }
+    // }
 
-    function balanceOfMany (address[] memory account) public view returns (uint256[] memory) {
-        uint256[] memory balances = new uint256[](account.length);
+    // function balanceOfMany (address[] memory account) public view returns (uint256[] memory) {
+    //     uint256[] memory balances = new uint256[](account.length);
 
-            for(uint i = 0; i < account.length; i++) {
-            balances[i] = balanceOf(account[i]);
-        }
-        return balances;
-    }
+    //         for(uint i = 0; i < account.length; i++) {
+    //         balances[i] = balanceOf(account[i]);
+    //     }
+    //     return balances;
+    // }
 
 
     function transfer(address to, uint256 value) public notBlackListed(to) returns (bool) {
