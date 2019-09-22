@@ -1,7 +1,7 @@
 {
-  "name": "skywork",
+  "name": "SGDX",
   "version": "1.0.0",
-  "description": "Sky Work Test Project",
+  "description": "SGDX Project",
   "main": "truffle-config.js",
   "directories": {
     "test": "test"
