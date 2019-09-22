@@ -4,7 +4,7 @@
 pragma solidity ^0.5.0;
 
 /**
- * @dev Interface of the ERC20 standard as defined in the EIP. Does not include
+ * @dev Interface of the ERC20 standard as defined in the EIP. Does not includewwaa
  * the optional functions; to access them see `ERC20Detailed`.
  */
 interface IERC20 {
@@ -811,13 +811,19 @@ contract BlackListerRole {
     }
 }
 
-// File: contracts/SkyWorkStableCoin.sol
+// File: contracts/SGDXStableCoin.sol
 
-pragma solidity 0.5.0;
+pragma solidity 0.5.0;
+
+
+
+
+
+
 
 
 /**
- * @title SkyWork Stable Coin
+ * @title SGDX Stable Coin
  *
  * @notice Smart Contract provides ERC20 functionality with
  *         an option to pause, unpause, mint, burn tokens.
@@ -825,7 +831,7 @@ pragma solidity 0.5.0;
  * @author Robert Magier
  */
 
-contract SkyWorkStableCoin is ERC20Burnable, ERC20Mintable,ERC20Detailed, ERC20Pausable, BlackListerRole {
+contract SGDX StableCoin is ERC20Burnable, ERC20Mintable,ERC20Detailed, ERC20Pausable, BlackListerRole {
 
 
     event AddedToBlackList(address indexed account);
@@ -836,7 +842,7 @@ contract SkyWorkStableCoin is ERC20Burnable, ERC20Mintable,ERC20Detailed, ERC20P
     mapping(address=>bool) private _blacklist;
 
     /**
-    * @notice SkyWork Stabel Coin constructor.
+    * @notice SGDX Stabel Coin constructor.
     * @dev Constructor calls ERC20Detailed constructor to set name, symbol and decimals.
     * @param name ERC20 token name
     * @param symbol ERC20 Symbol
